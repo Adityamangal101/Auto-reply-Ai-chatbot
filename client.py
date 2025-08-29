@@ -2,7 +2,7 @@ from openai import OpenAI
 
 client = OpenAI(
   base_url="https://openrouter.ai/api/v1",
-  api_key="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",
+  api_key="api_key",
 )
 command='''
 [12:09 AM, 8/7/2025] Aditya: texts se zyada useful hoga "
@@ -34,4 +34,5 @@ completion = client.chat.completions.create(
     }
   ]
 )
+
 print(completion.choices[0].message.content)
